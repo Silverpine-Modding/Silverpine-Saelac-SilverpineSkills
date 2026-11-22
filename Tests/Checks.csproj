@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>SilverpineSkills.Checks</AssemblyName>
+    <NuGetAudit>false</NuGetAudit>
+    <Managed>../../../Silverpine_Data/Managed</Managed>
+    <Core>../../../BepInEx/core</Core>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(Managed)/Unity.TextMeshPro.dll" Private="false"/>
+    <ProjectReference Include="../SilverpineSkills.csproj;../../AdventurersGuild/AdventurersGuild.csproj;../../CompanionParty/CompanionParty.csproj;../../CustomGrowables/CustomGrowables.csproj;../../CustomCraftingRecipes/CustomCraftingRecipes.csproj" Private="false"/>
+    <Reference Include="$(Core)/BepInEx.dll;$(Core)/0Harmony.dll;$(Managed)/Assembly-CSharp.dll;$(Managed)/UnityEngine*.dll;../../../BepInEx/plugins/ModdingTools/ModdingTools.dll" Private="false"/>
+  </ItemGroup>
+</Project>

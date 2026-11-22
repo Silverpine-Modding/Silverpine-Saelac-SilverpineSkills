@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Version>0.3.0</Version>
+    <NuGetAudit>false</NuGetAudit>
+    <DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <Managed>../../Silverpine_Data/Managed</Managed>
+    <Plugins>../../BepInEx/plugins</Plugins>
+    <Core>../../BepInEx/core</Core>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Tests/**/*.cs" />
+    <Reference Include="$(Managed)/Unity.TextMeshPro.dll" Private="false" />
+    <Reference Include="$(Core)/BepInEx.dll;$(Core)/0Harmony.dll;$(Plugins)/ModdingTools/ModdingTools.dll;$(Plugins)/ModdingTools/Newtonsoft.Json.dll;$(Managed)/Assembly-CSharp.dll;$(Managed)/UnityEngine*.dll" Private="false" />
+    <ProjectReference Include="../AdventurersGuild/AdventurersGuild.csproj;../CustomCraftingRecipes/CustomCraftingRecipes.csproj;../CustomGrowables/CustomGrowables.csproj;../CompanionParty/CompanionParty.csproj" Private="false" />
+  </ItemGroup>
+</Project>
